@@ -22,10 +22,13 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
+
     implementation project(':db')  // 내 밑에 있는 자식을 일때는 projcet를 사용
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
 
 //    testImplementation platform('org.junit:junit-bom:5.9.1')

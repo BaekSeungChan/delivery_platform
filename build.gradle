@@ -4,26 +4,33 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.3'
 }
 
-group = 'com.delivery'
-version = '0.0.1-SNAPSHOT'
+//group = 'com.delivery'
+//version = '0.0.1-SNAPSHOT'
 
-java {
-	sourceCompatibility = '17'
+// 서로 간의 종속성 관리를 해주어야 한다.  부모 프로젝트에서는 하위 프로젝트에 무엇을 쓰겠다 지정할 수 있따.
+allprojects {
+	repositories { // 나에 하위에 있는 모든 레포지토리는 메이븐 사용해라
+		mavenCentral()
+	}
 }
 
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
-
-tasks.named('bootBuildImage') {
-	builder = 'paketobuildpacks/builder-jammy-base:latest'
-}
-
-tasks.named('test') {
-	useJUnitPlatform()
-}
+//java {
+//	sourceCompatibility = '17'
+//}
+//
+//repositories {
+//	mavenCentral()
+//}
+//
+//dependencies {
+//	implementation 'org.springframework.boot:spring-boot-starter'
+//	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//}
+//
+//tasks.named('bootBuildImage') {
+//	builder = 'paketobuildpacks/builder-jammy-base:latest'
+//}
+//
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}

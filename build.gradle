@@ -14,6 +14,14 @@ allprojects {
 	}
 }
 
+bootJar{
+	enabled = false
+}
+// bootJar와 jar를 패키징하지 않겠다.
+jar {
+	enabled = false
+}
+
 //java {
 //	sourceCompatibility = '17'
 //}

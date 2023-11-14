@@ -1,4 +1,7 @@
+// 부모
 rootProject.name = 'service'
+
+// 자녀
 include 'api'
 include 'db'
 

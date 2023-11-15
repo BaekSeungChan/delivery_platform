@@ -23,5 +23,5 @@ public class BaseEntity {
     private Long id;
 
     // id 필드의 타입이 Long으로 정의되어 있는 경우, 데이터베이스 테이블에서 id 열을 bigint 유형으로 매칭되는 것이 권장된다.
-    // Long 타입이 Java에서 64비트의 정수 값을 나타내며, 데이터베이스의 'bigint'유형과 호환되기 떄문이다.
+    // Long 타입이 Java에서 64비트의 정수 값을 나타내며, 데이터베이스의 'bigint'유형과 호환되기 떄문이다.ㅇ
 }
